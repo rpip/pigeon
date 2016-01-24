@@ -43,6 +43,11 @@ defmodule Pigeon.APNS.Notification do
 end
 
 defmodule Pigeon.GCM.Notification do
+
+  def new(%{notification: notification, data: data}, token) do
+    Pigeon.Notification.json_payload(%{to: token, notification: notification, data: data})
+  end
+
   def new(data, token) do
     Pigeon.Notification.json_payload(%{to: token, data: data})
   end
