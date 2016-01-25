@@ -21,7 +21,7 @@ defmodule Pigeon.Mixfile do
 
   defp deps do
     [{:poison, "~> 1.5"},
-    {:httpoison, "~> 0.7.2"}]
+    {:httpoison, "~> 0.8.1"}]
   end
 
   defp description do

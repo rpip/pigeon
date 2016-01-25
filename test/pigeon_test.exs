@@ -6,7 +6,7 @@ defmodule PigeonTest do
   @token System.get_env("GCM_TEST_TOKEN")
   @data  %{foo: "bar"}
 
-  test "notification broadcast" do
+  test "data push" do
     GCM.Notification.new(@data, @token)
     |> GCM.push
   end
